@@ -50,6 +50,16 @@ const page = () => {
       create_date: new Date(),
       status: "1",
       updated: new Date(),
+      shipments: [
+        {
+          number: "22222222",
+          volume: 12 * 12 * 12,
+        },
+        {
+          number: "3333333",
+          volume: 16 * 16 * 16,
+        },
+      ],
     };
     axios
       .post("/api/lots", data)

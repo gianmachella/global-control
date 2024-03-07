@@ -20,9 +20,9 @@ export async function GET(request, { params }) {
   }
 }
 
-export async function PUT(request) {
+export async function PUT(request, { params }) {
   try {
-    const { id } = request.params; // Obtener el ID del parámetro de la solicitud
+    const { id } = params;
     const {
       lot_number,
       destination,
@@ -30,14 +30,33 @@ export async function PUT(request) {
       updated,
       status,
       create_date,
+      shipments,
     } = await request.json();
 
+    let totalVolume = 0;
+
+    if (shipments) {
+      let shipmentObj = JSON.parse(shipments);
+      await shipmentObj.forEach((element) => {
+        totalVolume += element.volume;
+      });
+    }
+
     const result = await pool.query(
-      "UPDATE lots SET lot_number = ?, destination = ?, conveyance = ?, updated = ?, status = ?, create_date = ? WHERE id = ?",
-      [lot_number, destination, conveyance, updated, status, create_date, id]
+      "UPDATE lots SET lot_number = ?, destination = ?, conveyance = ?, updated = ?, status = ?, shipments = ?, create_date = ?, volume = ? WHERE id = ?",
+      [
+        lot_number,
+        destination,
+        conveyance,
+        updated,
+        status,
+        shipments,
+        create_date,
+        totalVolume,
+        id,
+      ]
     );
 
-    // Comprobar si se actualizó correctamente el lote
     if (result.affectedRows === 0) {
       return NextResponse.json(
         { error: "No se pudo actualizar el lote" },
@@ -53,7 +72,7 @@ export async function PUT(request) {
 
 export async function DELETE(request) {
   try {
-    const { id } = request.params; // Obtener el ID del parámetro de la solicitud
+    const { id } = request.params;
     const result = await pool.query("DELETE FROM lots WHERE id = ?", [id]);
 
     if (result.affectedRows === 0) {

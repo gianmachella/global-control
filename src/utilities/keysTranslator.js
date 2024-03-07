@@ -16,6 +16,7 @@ const en = {
   admin_nav_item_logout: "Logout",
   admin_page_create_lot_title: "CreateLot",
   admin_page_create_lot_alert_success: "Lot created successfully",
+  admin_page_updated_lot_alert_success: "Lot updated successfully",
   admin_page_create_lot_alert_error: "Error creating the lot",
   admin_page_create_lot_input_label_lot_number: "Lot Number",
   admin_page_create_lot_input_placeholder_lot_number: "Enter the lot number",
@@ -45,6 +46,8 @@ const en = {
   admin_text_created_status_on_travel_on_airplane: "On travel on airplane",
   admin_text_created_status_on_aduanas: "On customs",
   admin_text_created_status_on_final_transit: "On final transit to destination",
+  admin_text_update: "Update ",
+  admin_text_update_volume: "Volume",
 };
 
 const es = {
@@ -64,6 +67,7 @@ const es = {
   admin_nav_item_logout: "Cerrar Sesión",
   admin_page_create_lot_title: "Crear Lote",
   admin_page_create_lot_alert_success: "Lote creado con exito",
+  admin_page_updated_lot_alert_success: "Lote actualizado con exito",
   admin_page_create_lot_alert_error: "Error al crear el lote",
   admin_page_create_lot_input_label_lot_number: "Número de Lote",
   admin_page_create_lot_input_placeholder_lot_number:
@@ -95,6 +99,8 @@ const es = {
   admin_text_created_status_on_travel_on_airplane: "En viaje en avión",
   admin_text_created_status_on_aduanas: "En aduanas",
   admin_text_created_status_on_final_transit: "En transito final a destino",
+  admin_text_update: "Actualizar ",
+  admin_text_update_volume: "Volumen",
 };
 
 export { en, es };

@@ -36,7 +36,9 @@ const Select = (props) => {
         id={id}
         required={required}
         value={value}
-        onChange={(e) => onChangeValue(e.target.value)}
+        onChange={(e) => {
+          onChangeValue(e.target.value);
+        }}
       >
         <option value="">{placeholder}</option>
         {options.map((option, key) => {

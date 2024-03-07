@@ -5,3 +5,59 @@
   justify-content: center;
   align-items: center;
 }
+
+.update-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: row;
+  width: 100%;
+}
+
+.content {
+  margin-left: 17% !important;
+  padding-left: 60px !important;
+  margin-right: 50px !important;
+}
+
+.text-shipment-card {
+  font-size: 11px !important;
+  margin: 0 !important;
+}
+
+.title-shipment-card {
+  font-size: 14px !important;
+  margin: 0 !important;
+}
+
+.shipment-box {
+  text-decoration: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.button-add {
+  margin-top: 40px !important;
+}

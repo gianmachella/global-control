@@ -22,14 +22,23 @@ export async function POST(request) {
       updated,
       status,
       create_date,
+      shipments,
     } = await request.json();
 
     const result = await pool.query(
-      "INSERT INTO lots (lot_number, destination, conveyance, updated, status, create_date) VALUES (?, ?, ?, ?, ?, ?)",
-      [lot_number, destination, conveyance, updated, status, create_date]
+      "INSERT INTO lots (lot_number, destination, conveyance, updated, status, create_date, shipments) VALUES (?, ?, ?, ?, ?, ?, ?)",
+      [
+        lot_number,
+        destination,
+        conveyance,
+        updated,
+        status,
+        create_date,
+        JSON.stringify(shipments),
+      ]
     );
 
-    return NextResponse.json({ message: "Lote creado correctamente", qrCode });
+    return NextResponse.json({ message: "Lote creado correctamente" });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
