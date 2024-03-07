@@ -1,0 +1,19 @@
+.transparent-dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.transparent-dropdown .dropdown-menu {
+  border: 1px solid #c5c5c5;
+  border-top: 0;
+  border-radius: 0 0 7px 7px;
+  margin-top: 23px;
+}
+
+.icon-notify {
+  color: rgb(27, 164, 27);
+}
+
+.dropdown-item:focus {
+  background-color: rgb(145, 145, 145);
+  color: #e2e2e2;
+}

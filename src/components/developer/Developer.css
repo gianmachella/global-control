@@ -1,0 +1,18 @@
+.developer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+  text-decoration: none;
+  color: rgb(119, 119, 119);
+}
+
+.text-dev {
+  font-size: 0.7rem;
+}
+
+.img-dev {
+  width: 20px;
+}

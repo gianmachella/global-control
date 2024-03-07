@@ -1,0 +1,142 @@
+/* NavBar */
+.nav-container {
+  width: 100%;
+  position: fixed !important;
+  z-index: 100;
+}
+
+.left-side-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-nav {
+  width: 25%;
+  margin-top: 10px;
+}
+
+.icons {
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.icon-menu-collapse {
+  font-size: 1.8rem;
+  transition: 0.3s;
+}
+
+.icons:hover {
+  color: #0091ff;
+  font-size: 1.4rem;
+  transition: 0.3s;
+  -webkit-filter: drop-shadow(5px 5px 5px #b8b7b7);
+  filter: drop-shadow(5px 5px 5px #aaaaaa);
+}
+
+.icon-menu-collapse:hover {
+  cursor: pointer;
+}
+
+/* SideMenu */
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.sidemenu-and-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidemenu-container {
+  width: 15%;
+  height: 100vh;
+  background-color: #1b1b29;
+  padding: 100px 0 0 0;
+  position: fixed;
+  z-index: 100;
+  transition: 1s;
+  z-index: 10;
+}
+
+.sidemenu-container-collapsed {
+  width: 5%;
+  height: 100vh;
+  background-color: #1b1b29;
+  padding: 100px 0 0 0;
+  position: fixed;
+  z-index: 100;
+  transition: 1s;
+  z-index: 10;
+}
+
+.content {
+  width: 85%;
+  margin-left: 20%;
+  padding: 20px;
+  transition: 1s;
+  margin-top: 98px;
+}
+
+.content-collapsed {
+  width: 95%;
+  margin-left: 10%;
+  padding: 20px;
+  transition: 1s;
+  margin-top: 98px;
+}
+
+.menu {
+  color: #aaaaaa;
+  list-style: none;
+  padding: 0;
+  transition: 1s;
+}
+
+.item-menu-sidebar {
+  padding: 15px 30px;
+  color: #aaaaaa;
+  text-decoration: none;
+}
+
+.item-menu-sidebar:hover {
+  background-color: #35354f;
+  cursor: pointer;
+}
+
+.icon-menu {
+  margin-right: 10px;
+}
+
+.program-name {
+  color: rgb(119, 119, 119);
+  font-size: 0.6rem;
+  margin-bottom: -15px;
+}
+
+.submenu li {
+  list-style: none;
+  background-color: #454556;
+}
+
+.submenu {
+  opacity: 0;
+  display: none;
+  padding: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.submenu.submenu-active {
+  opacity: 1;
+  display: block;
+}
+
+.text-item-menu {
+  text-decoration: none;
+}
