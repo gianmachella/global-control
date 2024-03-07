@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Global Control
 
-## Getting Started
+Global Control is an administrative software tailored for logistics companies, facilitating parcel shipments, lot registration, assignment of shipments to lots, customer registration, and providing weekly, monthly, and yearly statistics. Built with Next.js, using MySQL for the database, Bootstrap for styling, and leveraging QR code generation with the `qrcode` library and PDF generation with `jspdf-autotable`. Fetch operations are managed using Axios.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Efficiently manage logistics operations including parcel shipments, lot registration, and customer management.
+- Generate QR codes for shipments and lots to streamline tracking and management.
+- Create detailed PDF reports for shipments and lots using `jspdf-autotable`.
+- Flexible dashboard providing insights through weekly, monthly, and yearly statistics.
+- User-friendly interface designed with Bootstrap for a seamless user experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- **Frontend**: Next.js
+- **Backend**: MySQL
+- **Styling**: Bootstrap
+- **QR Code Generation**: qrcode
+- **PDF Generation**: jspdf-autotable
+- **HTTP Requests**: Axios
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Navigate to the project directory:
 
-## Deploy on Vercel
+3. Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Configure the MySQL database connection in the `.env` file.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. Start the development server:
+
+6. Access the application at `http://localhost:3000`.
+
+## Usage
+
+- Navigate through the intuitive user interface to access different features such as parcel shipments, lot management, customer registration, and statistics.
+- Use the QR code generation feature to generate tracking codes for shipments and lots.
+- Generate detailed PDF reports for shipments and lots to maintain records and streamline operations.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or have suggestions for improvement, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
